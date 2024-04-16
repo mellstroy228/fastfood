@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAAAST FOOD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="./simple-adaptive-slider/simple-adaptive-slider.css">
+    <script src="./simple-adaptive-slider/simple-adaptive-slider.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var slider = new ItcSimpleSlider('.itcss', {
+            autoplay: true,
+            interval: 2000,
+            swipe: true,
+            loop: true
+          });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html"><img src="./img/logo.svg"></a>
+                </div>
+                <div class="nav">
+                    <a href="./carttt.php">Корзина</a>
+                </div>
+            </div>
+            <div class="nav_menu">
+                <a href="#burger" class="scrollto"><img src="./img/burger.svg"></a>
+                <a href="#coffee" class="scrollto"><img src="./img/coffee.svg"></a>
+                <a href="#pizza" class="scrollto"><img src="./img/pizza.svg"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="itcss">
+            <div class="itcss__wrapper">
+              <div class="itcss__items">
+                <div class="itcss__item">
+                  <img class="img_slider" src="./img/slider1.jpg">
+                </div>
+                <div class="itcss__item">
+                  <img class="img_slider" src="./img/slider2.jpg">
+                </div>
+                <div class="itcss__item">
+                  <img class="img_slider" src="./img/slider3.jpg">
+                </div>
+                <div class="itcss__item">
+                  <img class="img_slider" src="./img/slider4.jpg">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="cat">
+                <h1>Меню</h1>
+            </div>
+            <div class="content">
+                    <h2 id="burger">Бургеры</h2>
+                <div class="card_content">
+                    <div class="card">
+                        <img class="img_cards" src="./img/content/burger/Cheeseburger.png" alt="Burger">
+                        <div class="card-info">
+                            <h3 class="card-title">Чизбургер</h3>
+                            <p class="card-description">Наша новая классика с нежным бифштексом по-домашнему. Любимое сочетание сыра Чеддер, маринованных огурчиков, лука, кетчупа и горчицы — на подрумяненной булочке с кунжутом.</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">229.99 ₽</p>
+                            <button onclick="addToCart('Cheeseburger')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card__image" src="./img/content/burger/Double cheeseburger.png" alt="Burger">
+                        <div class="card-info">
+                            <h3 class="card-title">Дабл чизбургер</h3>
+                            <p class="card-description">Это точно сочно! Целых два бифштекса по-домашнему из фирменной говядины с добавлением отборной курочки, сыр Чеддер, хрустящие овощи, кетчуп и горчица на румяной булочке с кунжутом.</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">299.99 ₽</p>
+                            <button onclick="addToCart('Double_cheeseburger')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card__image" src="./img/content/burger/Chickenburger.png" alt="Burger">
+                        <div class="card-info">
+                            <h3 class="card-title">Чикенбургер</h3>
+                            <p class="card-description">Новый соус Тартар подчеркивает вкус сочной курочки с сыром Пармезан! А ещё внутри свежие томаты, салат Айсберг, рубленый лучок — на картофельной булочке с кунжутом.</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">209.99 ₽</p>
+                            <button onclick="addToCart('Chickenburger')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="coffee">Кофе</h2>
+                <div class="card_content">
+                    <div class="card card-coffee">
+                        <img class="card__image" src="./img/content/coffee/Coffee.png" alt="Coffee">
+                        <div class="card-info">
+                            <h3 class="card-title">Кофе</h3>
+                            <p class="card-description">Натуральный свежесваренный кофе станет прекрасным началом дня или дополнением к плотному обеду и легкому десерту.</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">119.99 ₽</p>
+                            <button onclick="addToCart('Coffee')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card card-coffee">
+                        <img class="card__image" src="./img/content/coffee/Vanilla Latte.png" alt="Coffee">
+                        <div class="card-info">
+                            <h3 class="card-title">Ванильный Латте</h3>
+                            <p class="card-description">Нежный молочно-кофейный напиток состоит из трех слоев: молока, кофе и молочной пенки.</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">189.99 ₽</p>
+                            <button onclick="addToCart('Vanilla_latte')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card card-coffee">
+                        <img class="card__image" src="./img/content/coffee/Latte Tiramisu.png" alt="Coffee">
+                        <div class="card-info">
+                            <h3 class="card-title">Латте Тирамису</h3>
+                            <p class="card-description">Нежный Латте со вкусом знаменитого итальянского десерта Тирамису — с нотками какао, сливочного сыра Маскарпоне и бисквитного печенья. Перемешай, чтобы стало ещё ярче!</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">194.99 ₽</p>
+                            <button onclick="addToCart('Latte_tiramisu')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="pizza">Пицца</h2>
+                <div class="card_content">
+                    <div class="card">
+                        <img class="card__image" src="./img/content/pizza/Meat.png" alt="Pizza">
+                        <div class="card-info">
+                            <h3 class="card-title">Мясная</h3>
+                            <p class="card-description">Цыпленок, ветчина, пикантная пепперони, острая чоризо, моцарелла, фирменный томатный соус</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">194.99 ₽</p>
+                            <button onclick="addToCart('Meat')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card__image" src="./img/content/pizza/Ham_and_cheese.png" alt="Pizza">
+                        <div class="card-info">
+                            <h3 class="card-title">Ветчина и сыр</h3>
+                            <p class="card-description">Ветчина, моцарелла, фирменный соус альфредо</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">189.99 ₽</p>
+                            <button onclick="addToCart('Cheese_chicken')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card__image" src="./img/content/pizza/Cheese chicken.png" alt="Pizza">
+                        <div class="card-info">
+                            <h3 class="card-title">Сырный цыпленок</h3>
+                            <p class="card-description">Цыпленок, моцарелла, сыры чеддер и пармезан, сырный соус, томаты, фирменный соус альфредо, чеснок</p>
+                        </div>
+                        <div class="card-bottom price">
+                            <p class="card-price">194.99 ₽</p>
+                            <button onclick="addToCart('Ham_and_cheese')" href="#" class="card-button">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>    
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+    <script>
+        function addToCart(productCode) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText);
+                }
+            };
+            xhr.open("POST", "add_to_cart.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("product_code=" + productCode);
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.img_cards').hover(
+                function(){
+                    $(this).stop(true).animate({'zoom': 1.1}, 'slow');
+                },
+                function(){
+                    $(this).stop(true).animate({'zoom': 1}, 'slow');
+                }
+            );
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function() {
+        jQuery("a.scrollto").click(function () {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 700);
+        return false;
+        });
+        });
+        </script>
+</body>
+</html>

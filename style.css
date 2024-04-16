@@ -1,0 +1,271 @@
+:root {
+    font-family: 'Orelega One', sans-serif;
+}
+
+html {
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 64px;
+    color: #502314;
+}
+
+h2 {
+    font-size: 48px;
+    color: #613829;
+}
+
+h3 {
+    font-size: 24px;
+    color: #613829;
+}
+
+th {
+    color: #613829;
+    font-size: 24px;
+    padding: 20px 80px 20px 0;
+}
+
+td {
+    color: sienna;
+    font-size: 18px;
+    padding: 0 80px 0 0;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #F5EBDC;
+}
+
+a {
+    text-decoration: none;
+
+    color: #613829;
+}
+
+p {
+    color: sienna;
+    font-size: 18px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    background-color: #502314;
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.30);
+
+    padding: 15px 0 15px 0;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+
+    font-size: 24px;
+}
+
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+    height: 500px; 
+    margin-top: 40px; 
+
+    margin-left: auto; /* Автоматический отступ слева */
+    margin-right: auto; /* Автоматический отступ справа */
+    border-radius: 20px;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    animation: slide 15s linear infinite;
+}
+
+.banner-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.banner-slide:nth-child(2) {
+    animation-delay: 5s; /* Интервал смены слайдов */
+}
+
+.banner-slide:nth-child(3) {
+    animation-delay: 10s; /* Интервал смены слайдов */
+}
+
+.banner-slide img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    53.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.menu {
+    padding: 60px 0 0 0;
+}
+
+
+.cat {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    padding: 60px 0 0 0;
+}
+
+.card_content {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 40px 0 60px 0;
+    animation: scale 10s linear 5s infinite;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.card-price {
+    font-size: 29px;
+}
+
+.card-button { 
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #FF6E20;
+    color: #fff; 
+    border-radius: 20px; 
+    font-size: 19px;
+}
+
+.img_burger {
+    width: 200px;
+    height: 120px;
+}
+
+.img_coffee {
+    width: 160px;
+    height: 200px;
+}
+
+.img_pizza {
+    width: 200px;
+    height: 200px;
+}
+
+.content h2 {
+    padding-left: 100px;
+}
+
+.card {
+    width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 36px;
+    background-color: #FCF6EC;    ;
+    border-radius: 20px;
+}
+
+.card .card-info {
+    margin-top: 30px;
+    max-width: 320px;
+}
+
+.card-info .card-description {
+    margin-top: 16px;
+}
+
+.card-bottom {
+    margin-top: 20px;
+}
+
+.order {
+    padding: 60px 310px 0 310px;
+}
+
+.vector {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+table {
+    margin-left: 310px;
+}
+
+.zoomContainer {
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.itcss {
+    max-width: 50vw !important;
+    margin: 60px 0;
+}
+
+.itcss__items {
+    counter-reset: slide;
+}
+
+.itcss__item {
+    counter-increment: slide;
+}
+
+.itcss__wrapper,
+.img_slider {
+    width: 50vw;
+    height: 60vh;
+}
+
+.img_slider {
+    object-fit: cover;
+}
+
